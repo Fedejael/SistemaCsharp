@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace CURSO
+namespace CURSO.Presentacion
 {
-    public partial class Form1 : Form
+    public partial class MenuPrincipal : Form
     {
-        public Form1()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }

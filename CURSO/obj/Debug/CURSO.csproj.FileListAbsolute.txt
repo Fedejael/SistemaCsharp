@@ -1,0 +1,8 @@
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\bin\Debug\CURSO.exe
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\bin\Debug\CURSO.pdb
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.csproj.AssemblyReference.cache
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.Properties.Resources.resources
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.csproj.GenerateResource.cache
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.csproj.CoreCompileInputs.cache
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.exe
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.pdb
