@@ -15,5 +15,11 @@ namespace CURSO.Presentacion
         {
             InitializeComponent();
         }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            panelBienvenida.Dock = DockStyle.Fill;
+
+        }
     }
 }
