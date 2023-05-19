@@ -7,3 +7,4 @@ C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.cs
 C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.exe
 C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.pdb
 C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.Presentacion.MenuPrincipal.resources
+C:\Users\CantoFedericoJ\Documents\Sistema de asistencia\CURSO\obj\Debug\CURSO.Presentacion.Personal.resources
