@@ -15,5 +15,6 @@ namespace CURSO.Presentacion
         {
             InitializeComponent();
         }
+ 
     }
 }
