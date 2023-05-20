@@ -89,5 +89,53 @@ namespace CURSO.Datos
                 Dconexion.cerrar();
             }
         }
+        public void MostrarPersonal(ref DataTable dt, int desde, int hasta)
+        {
+            try
+            {
+                Dconexion.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("mostrarPersonal",Dconexion.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
+                da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
+                da.Fill(dt);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                Dconexion.cerrar();
+            }
+        }
+        public void BuscarPersonal(ref DataTable dt, int desde, int hasta, string buscador)
+        {
+            try
+            {
+                Dconexion.abrir();
+                SqlDataAdapter da = new SqlDataAdapter("BuscarPersonal", Dconexion.conectar);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@Desde", desde);
+                da.SelectCommand.Parameters.AddWithValue("@Hasta", hasta);
+                da.SelectCommand.Parameters.AddWithValue("@Buscador", buscador);
+                da.Fill(dt);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                Dconexion.cerrar();
+            }
+        }
+
     }
 }

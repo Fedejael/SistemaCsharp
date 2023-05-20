@@ -31,29 +31,29 @@ namespace CURSO.Presentacion
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.PanelPaginado = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.PanelRegistros = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnGuardarPersonal = new System.Windows.Forms.Button();
+            this.btnGuardarCambiosPersonal = new System.Windows.Forms.Button();
+            this.btnAgregarCargo = new System.Windows.Forms.Button();
+            this.cbxPais = new System.Windows.Forms.ComboBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtSueldoHora = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@ namespace CURSO.Presentacion
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.PanelCargos = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -78,10 +78,10 @@ namespace CURSO.Presentacion
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.PanelPaginado.SuspendLayout();
+            this.PanelRegistros.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.PanelCargos.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +89,7 @@ namespace CURSO.Presentacion
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnAgregar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBox1);
@@ -112,19 +112,20 @@ namespace CURSO.Presentacion
             this.button6.Text = "Mostrar todos";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.button1.BackgroundImage = global::CURSO.Properties.Resources.mas;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1005, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 67);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnAgregar.BackgroundImage = global::CURSO.Properties.Resources.mas;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Location = new System.Drawing.Point(1005, 0);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 67);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // pictureBox1
             // 
@@ -174,22 +175,22 @@ namespace CURSO.Presentacion
             this.dataGridView1.Size = new System.Drawing.Size(1080, 533);
             this.dataGridView1.TabIndex = 1;
             // 
-            // panel2
+            // PanelPaginado
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 600);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1080, 59);
-            this.panel2.TabIndex = 2;
+            this.PanelPaginado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.PanelPaginado.Controls.Add(this.label9);
+            this.PanelPaginado.Controls.Add(this.label8);
+            this.PanelPaginado.Controls.Add(this.label7);
+            this.PanelPaginado.Controls.Add(this.button8);
+            this.PanelPaginado.Controls.Add(this.button7);
+            this.PanelPaginado.Controls.Add(this.button10);
+            this.PanelPaginado.Controls.Add(this.button9);
+            this.PanelPaginado.Controls.Add(this.label6);
+            this.PanelPaginado.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelPaginado.Location = new System.Drawing.Point(0, 600);
+            this.PanelPaginado.Name = "PanelPaginado";
+            this.PanelPaginado.Size = new System.Drawing.Size(1080, 59);
+            this.PanelPaginado.TabIndex = 2;
             // 
             // button8
             // 
@@ -217,32 +218,33 @@ namespace CURSO.Presentacion
             this.button7.Text = "Pagina Siguiente";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // panel4
+            // PanelRegistros
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.flowLayoutPanel1);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.textBox5);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(29, 89);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1033, 481);
-            this.panel4.TabIndex = 3;
+            this.PanelRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.PanelRegistros.Controls.Add(this.PanelCargos);
+            this.PanelRegistros.Controls.Add(this.button5);
+            this.PanelRegistros.Controls.Add(this.flowLayoutPanel1);
+            this.PanelRegistros.Controls.Add(this.btnAgregarCargo);
+            this.PanelRegistros.Controls.Add(this.cbxPais);
+            this.PanelRegistros.Controls.Add(this.panel9);
+            this.PanelRegistros.Controls.Add(this.txtSueldoHora);
+            this.PanelRegistros.Controls.Add(this.panel8);
+            this.PanelRegistros.Controls.Add(this.txtCargo);
+            this.PanelRegistros.Controls.Add(this.panel6);
+            this.PanelRegistros.Controls.Add(this.txtIdentificacion);
+            this.PanelRegistros.Controls.Add(this.panel5);
+            this.PanelRegistros.Controls.Add(this.txtNombres);
+            this.PanelRegistros.Controls.Add(this.label5);
+            this.PanelRegistros.Controls.Add(this.label4);
+            this.PanelRegistros.Controls.Add(this.label3);
+            this.PanelRegistros.Controls.Add(this.label2);
+            this.PanelRegistros.Controls.Add(this.label1);
+            this.PanelRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelRegistros.Location = new System.Drawing.Point(29, 89);
+            this.PanelRegistros.Name = "PanelRegistros";
+            this.PanelRegistros.Size = new System.Drawing.Size(1033, 481);
+            this.PanelRegistros.TabIndex = 3;
+            this.PanelRegistros.Visible = false;
             // 
             // button5
             // 
@@ -261,64 +263,83 @@ namespace CURSO.Presentacion
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.btnGuardarPersonal);
+            this.flowLayoutPanel1.Controls.Add(this.btnGuardarCambiosPersonal);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(135, 335);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(224, 76);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button3
+            // btnGuardarPersonal
             // 
-            this.button3.BackgroundImage = global::CURSO.Properties.Resources.verde;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 50);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGuardarPersonal.BackgroundImage = global::CURSO.Properties.Resources.verde;
+            this.btnGuardarPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarPersonal.FlatAppearance.BorderSize = 0;
+            this.btnGuardarPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPersonal.Location = new System.Drawing.Point(3, 3);
+            this.btnGuardarPersonal.Name = "btnGuardarPersonal";
+            this.btnGuardarPersonal.Size = new System.Drawing.Size(103, 50);
+            this.btnGuardarPersonal.TabIndex = 0;
+            this.btnGuardarPersonal.Text = "Guardar";
+            this.btnGuardarPersonal.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnGuardarCambiosPersonal
             // 
-            this.button4.BackgroundImage = global::CURSO.Properties.Resources.verde;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(112, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 50);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Guardar*";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnGuardarCambiosPersonal.BackgroundImage = global::CURSO.Properties.Resources.verde;
+            this.btnGuardarCambiosPersonal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarCambiosPersonal.FlatAppearance.BorderSize = 0;
+            this.btnGuardarCambiosPersonal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambiosPersonal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambiosPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambiosPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCambiosPersonal.Location = new System.Drawing.Point(112, 3);
+            this.btnGuardarCambiosPersonal.Name = "btnGuardarCambiosPersonal";
+            this.btnGuardarCambiosPersonal.Size = new System.Drawing.Size(103, 50);
+            this.btnGuardarCambiosPersonal.TabIndex = 1;
+            this.btnGuardarCambiosPersonal.Text = "Guardar*";
+            this.btnGuardarCambiosPersonal.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAgregarCargo
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(412, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 41);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "+ Agregar cargo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAgregarCargo.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCargo.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarCargo.Location = new System.Drawing.Point(412, 200);
+            this.btnAgregarCargo.Name = "btnAgregarCargo";
+            this.btnAgregarCargo.Size = new System.Drawing.Size(149, 41);
+            this.btnAgregarCargo.TabIndex = 0;
+            this.btnAgregarCargo.Text = "+ Agregar cargo";
+            this.btnAgregarCargo.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxPais
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(221, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 28);
-            this.comboBox1.TabIndex = 13;
+            this.cbxPais.FormattingEnabled = true;
+            this.cbxPais.Items.AddRange(new object[] {
+            "Peru",
+            "Venezuela",
+            "Mexico",
+            "Costa Rica",
+            "Guatemala",
+            "Honduras",
+            "Nicaragua",
+            "Panama",
+            "Cuba",
+            "Puerto RIco",
+            "Republica Dominicana",
+            "Argentina",
+            "Bolivia",
+            "Chile",
+            "Colombia",
+            "Ecuador",
+            "Uruguay",
+            "España"});
+            this.cbxPais.Location = new System.Drawing.Point(221, 144);
+            this.cbxPais.Name = "cbxPais";
+            this.cbxPais.Size = new System.Drawing.Size(152, 28);
+            this.cbxPais.TabIndex = 13;
             // 
             // panel9
             // 
@@ -328,16 +349,16 @@ namespace CURSO.Presentacion
             this.panel9.Size = new System.Drawing.Size(138, 1);
             this.panel9.TabIndex = 12;
             // 
-            // textBox6
+            // txtSueldoHora
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.White;
-            this.textBox6.Location = new System.Drawing.Point(221, 266);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 19);
-            this.textBox6.TabIndex = 11;
+            this.txtSueldoHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtSueldoHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSueldoHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSueldoHora.ForeColor = System.Drawing.Color.White;
+            this.txtSueldoHora.Location = new System.Drawing.Point(221, 266);
+            this.txtSueldoHora.Name = "txtSueldoHora";
+            this.txtSueldoHora.Size = new System.Drawing.Size(138, 19);
+            this.txtSueldoHora.TabIndex = 11;
             // 
             // panel8
             // 
@@ -347,16 +368,16 @@ namespace CURSO.Presentacion
             this.panel8.Size = new System.Drawing.Size(180, 1);
             this.panel8.TabIndex = 10;
             // 
-            // textBox5
+            // txtCargo
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(221, 210);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 19);
-            this.textBox5.TabIndex = 9;
+            this.txtCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtCargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.ForeColor = System.Drawing.Color.White;
+            this.txtCargo.Location = new System.Drawing.Point(221, 210);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(180, 19);
+            this.txtCargo.TabIndex = 9;
             // 
             // panel6
             // 
@@ -366,16 +387,16 @@ namespace CURSO.Presentacion
             this.panel6.Size = new System.Drawing.Size(198, 1);
             this.panel6.TabIndex = 6;
             // 
-            // textBox3
+            // txtIdentificacion
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(221, 87);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(198, 19);
-            this.textBox3.TabIndex = 5;
+            this.txtIdentificacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtIdentificacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacion.ForeColor = System.Drawing.Color.White;
+            this.txtIdentificacion.Location = new System.Drawing.Point(221, 87);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(198, 19);
+            this.txtIdentificacion.TabIndex = 5;
             // 
             // panel5
             // 
@@ -385,22 +406,22 @@ namespace CURSO.Presentacion
             this.panel5.Size = new System.Drawing.Size(308, 1);
             this.panel5.TabIndex = 4;
             // 
-            // textBox2
+            // txtNombres
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(221, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 19);
-            this.textBox2.TabIndex = 3;
+            this.txtNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.txtNombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.ForeColor = System.Drawing.Color.White;
+            this.txtNombres.Location = new System.Drawing.Point(221, 28);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(308, 19);
+            this.txtNombres.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(89, 266);
+            this.label5.Location = new System.Drawing.Point(73, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 20);
             this.label5.TabIndex = 4;
@@ -410,7 +431,7 @@ namespace CURSO.Presentacion
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(159, 210);
+            this.label4.Location = new System.Drawing.Point(153, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 3;
@@ -420,7 +441,7 @@ namespace CURSO.Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(172, 147);
+            this.label3.Location = new System.Drawing.Point(159, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 2;
@@ -430,7 +451,7 @@ namespace CURSO.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(108, 87);
+            this.label2.Location = new System.Drawing.Point(93, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 1;
@@ -440,7 +461,7 @@ namespace CURSO.Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(75, 28);
+            this.label1.Location = new System.Drawing.Point(57, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 0;
@@ -516,19 +537,19 @@ namespace CURSO.Presentacion
             this.label9.TabIndex = 8;
             this.label9.Text = "0";
             // 
-            // panel7
+            // PanelCargos
             // 
-            this.panel7.Controls.Add(this.flowLayoutPanel2);
-            this.panel7.Controls.Add(this.panel10);
-            this.panel7.Controls.Add(this.textBox4);
-            this.panel7.Controls.Add(this.panel11);
-            this.panel7.Controls.Add(this.textBox7);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Location = new System.Drawing.Point(579, 87);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(434, 238);
-            this.panel7.TabIndex = 15;
+            this.PanelCargos.Controls.Add(this.flowLayoutPanel2);
+            this.PanelCargos.Controls.Add(this.panel10);
+            this.PanelCargos.Controls.Add(this.textBox4);
+            this.PanelCargos.Controls.Add(this.panel11);
+            this.PanelCargos.Controls.Add(this.textBox7);
+            this.PanelCargos.Controls.Add(this.label10);
+            this.PanelCargos.Controls.Add(this.label11);
+            this.PanelCargos.Location = new System.Drawing.Point(579, 87);
+            this.PanelCargos.Name = "PanelCargos";
+            this.PanelCargos.Size = new System.Drawing.Size(434, 238);
+            this.PanelCargos.TabIndex = 15;
             // 
             // panel10
             // 
@@ -633,9 +654,9 @@ namespace CURSO.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.PanelRegistros);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelPaginado);
             this.Controls.Add(this.panel1);
             this.Name = "Personal";
             this.Size = new System.Drawing.Size(1080, 659);
@@ -643,12 +664,12 @@ namespace CURSO.Presentacion
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.PanelPaginado.ResumeLayout(false);
+            this.PanelRegistros.ResumeLayout(false);
+            this.PanelRegistros.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.PanelCargos.ResumeLayout(false);
+            this.PanelCargos.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -658,31 +679,31 @@ namespace CURSO.Presentacion
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PanelPaginado;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel PanelRegistros;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ComboBox cbxPais;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtSueldoHora;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtNombres;
+        private System.Windows.Forms.Button btnAgregarCargo;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGuardarPersonal;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGuardarCambiosPersonal;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -692,7 +713,7 @@ namespace CURSO.Presentacion
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel PanelCargos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;

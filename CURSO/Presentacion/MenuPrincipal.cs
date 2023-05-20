@@ -18,8 +18,16 @@ namespace CURSO.Presentacion
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            panelBienvenida.Dock = DockStyle.Fill;
+            panelPadre.Dock = DockStyle.Fill;
 
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            panelPadre.Controls.Clear();
+            Personal control = new Personal();
+            control.Dock = DockStyle.Fill;
+            panelPadre.Controls.Add(control);
         }
     }
 }
